@@ -2,9 +2,7 @@
 
 #### 🔗 [**Task no Shortcut**](https://app.shortcut.com/tratogestaodefila/story/numero-task/)
 
-* Alteração 1
-* Alteração 2
-* Alteração 3
+Explicar as alterações feitas
 
 * [ ]  **🚨 🔥 É um BUGFIX?**
 
