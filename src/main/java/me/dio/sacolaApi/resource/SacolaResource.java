@@ -1,5 +1,6 @@
 package me.dio.sacolaApi.resource;
 
+import io.swagger.annotations.Api;
 import lombok.RequiredArgsConstructor;
 import me.dio.sacolaApi.model.Item;
 import me.dio.sacolaApi.model.Sacola;
@@ -8,7 +9,9 @@ import me.dio.sacolaApi.service.SacolaService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-@Controller
+import java.util.List;
+@Api(value="/ifood-devweek/sacolas")
+@RestController
 @RequestMapping("/ifood-devweek/sacolas")
 @RequiredArgsConstructor
 public class SacolaResource {
@@ -27,5 +30,10 @@ public class SacolaResource {
     @PatchMapping("/fecharSacola/{sacolaId}")
     public Sacola fecharSacola(@PathVariable("sacolaId") Long sacolaId, @RequestParam("formaPagamento") int formaPagamento){
         return sacolaService.fecharSacola(sacolaId, formaPagamento);
+    }
+
+    @GetMapping
+    public List<Sacola> verTodasSacolas(){
+        return sacolaService.verTodas();
     }
 }
